@@ -1,0 +1,79 @@
+body {
+    background: gray;
+}
+
+.cube-3d {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 800px;
+}
+
+.cube-3d * {
+    transform-style: preserve-3d;
+}
+
+.cube-3d .y-axis {
+    transform: rotateX(0deg)
+}
+
+.cube-3d .x-axis {
+    transform: rotateY(0deg);
+}
+
+.cube-3d .face {
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+    opacity: .9;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cube-3d .face .enter {
+    width: 98px;
+    height: 98px;
+    border: 1px solid black;
+}
+
+.cube-3d .face-1 .enter-5{
+    background: url('../image/logo.svg') no-repeat center;
+    background-size: 90%;
+}
+
+.cube-3d .face-1 {background-color: white; transform: translateZ(150px);}
+
+.cube-3d .face-2 {background-color: green; transform: rotateY(90deg) translateZ(150px);}
+
+.cube-3d .face-3 {background-color: yellow; transform: rotateY(180deg) translateZ(150px);}
+
+.cube-3d .face-4 {background-color: blue; transform: rotateY(-90deg) translateZ(150px);}
+
+.cube-3d .face-5 {background-color: red; transform: rotateX(90deg) translateZ(150px);}
+
+.cube-3d .face-6 {background-color: orange; transform: rotateX(-90deg) translateZ(150px);}
+
+/*
+.animation
+{
+    animation-name: coucou;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.container:hover .animation
+{
+    animation-play-state: paused;
+}
+
+@keyframes coucou
+{
+    0%   { left: 0px;   }
+    25%  { left: -500px; background: blue;}
+    50%  { left: 500px; background: red;}
+    75%  { left: 200px; background: limegreen;}
+    100% { left: 0px;   }
+}
+*/
